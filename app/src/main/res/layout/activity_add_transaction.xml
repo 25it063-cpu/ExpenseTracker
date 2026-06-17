@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".AddTransactionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Transaction"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Type Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rbExpense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Expense"
+                android:checked="true"
+                android:textColor="@color/expense_red"
+                android:buttonTint="@color/expense_red" />
+
+            <RadioButton
+                android:id="@+id/rbIncome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Income"
+                android:textColor="@color/income_green"
+                android:buttonTint="@color/income_green" />
+
+        </RadioGroup>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Grocery shopping"
+            android:inputType="textCapSentences"
+            android:background="@drawable/card_background"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Amount -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount (₹)"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:background="@drawable/card_background"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Category -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="20dp"
+            tools:text="17 Jun 2026" />
+
+        <!-- Note -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Note (optional)"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add a note..."
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top"
+            android:background="@drawable/card_background"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Transaction"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-bold"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Cancel Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Cancel"
+            android:textSize="16sp"
+            android:textColor="@color/primary"
+            app:backgroundTint="@android:color/transparent"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
