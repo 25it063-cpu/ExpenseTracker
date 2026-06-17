@@ -42,8 +42,8 @@ com.example.expensetracker
 ## Screenshots
 
 <p align="center">
-  <img src="" width="250"/>
-  <img src="" width="250"/>
-  <img src="" width="250"/>
+  <img src="ET1.png" width="250"/>
+  <img src="ET2.jpeg" width="250"/>
+  <img src="ET3.jpeg" width="250"/>
 </p>
 
